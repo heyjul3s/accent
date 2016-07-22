@@ -1,0 +1,298 @@
+html,
+body {
+  min-height: 100%;
+}
+body {
+  padding-top: 90px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: 'Tittilium', sans-serif;
+  background-color: #261822;
+  color: #fff;
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    padding-top: 130px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+ul li,
+ol li {
+  display: inline-block;
+}
+img {
+  max-width: 100%;
+  margin: 0;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+a:focus,
+a:active {
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-shadow: none;
+}
+p {
+  line-height: 1.5;
+}
+button {
+  display: block;
+  width: 100%;
+  padding: 20px 25px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+.container {
+  position: relative;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+.layout {
+  display: block;
+  position: relative;
+}
+header {
+  padding: 35px 0;
+  text-align: center;
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    padding: 0;
+  }
+}
+header h1 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercacse;
+}
+.accent-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+  -webkit-transition: opacity 400ms ease-out, -webkit-transform 400ms ease-out;
+  transition: opacity 400ms ease-out, -webkit-transform 400ms ease-out;
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+  transition: opacity 400ms ease-out, transform 400ms ease-out, -webkit-transform 400ms ease-out;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+@media only screen and (min-width: 768px) {
+  .accent-container {
+    padding: 40px 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .accent-container:hover > .accent {
+    opacity: 0.5;
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  .accent-container:hover > .accent:hover {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .accent-container:hover > .accent:hover .btn {
+    opacity: 1;
+  }
+  .accent-container:hover > .accent:hover .btn .btn-border-1::before,
+  .accent-container:hover > .accent:hover .btn .btn-border-2::before {
+    width: 100%;
+  }
+  .accent-container:hover > .accent:hover .btn .btn-border-1::after,
+  .accent-container:hover > .accent:hover .btn .btn-border-2::after {
+    height: 100%;
+  }
+  .accent-container:hover > .accent:hover .btn .btn-border-1::after {
+    -webkit-transition-delay: 250ms;
+            transition-delay: 250ms;
+  }
+  .accent-container:hover > .accent:hover .btn .btn-border-2::before {
+    -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
+  }
+  .accent-container:hover > .accent:hover .btn .btn-border-2::after {
+    -webkit-transition-delay: 750ms;
+            transition-delay: 750ms;
+  }
+}
+.accent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: 10px;
+  padding: 40px;
+  background-color: #40152a;
+  border-top: 5px solid #731630;
+  vertical-align: top;
+  -webkit-transition: opacity 400ms ease-out, -webkit-transform 400ms ease-out;
+  transition: opacity 400ms ease-out, -webkit-transform 400ms ease-out;
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+  transition: opacity 400ms ease-out, transform 400ms ease-out, -webkit-transform 400ms ease-out;
+}
+@media only screen and (min-width: 768px) {
+  .accent {
+    padding: 40px 60px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .accent {
+    width: calc(33.33% - 20px);
+    padding: 40px 40px 60px;
+  }
+}
+.accent .accent-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+.accent .accent-content .product-title {
+  color: #ff5434;
+  text-transform: uppercase;
+}
+.accent .accent-content .product-summary,
+.accent .accent-content .suitable-for {
+  font-size: 14px;
+}
+.accent .accent-content .suitability-title {
+  margin-bottom: 0;
+  color: #ff5434;
+}
+.accent .accent-content .suitable-for {
+  margin-top: 0;
+}
+.accent .accent-content ul {
+  padding-bottom: 20px;
+  padding-left: 0;
+}
+.accent .accent-content ul li {
+  display: block;
+  position: relative;
+  font-size: 14px;
+  text-align: left;
+  padding: 5px 0 5px 15px;
+}
+.accent .accent-content ul li.feature-list-title {
+  padding: 5px 0;
+}
+.accent .accent-content ul li.feature-list-title::before,
+.accent .accent-content ul li.feature-list-title::after {
+  display: none;
+}
+.accent .accent-content ul li::before,
+.accent .accent-content ul li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+}
+.accent .accent-content ul li::before {
+  top: calc(50% - 5px);
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  background-color: #731630;
+}
+.accent .accent-content ul li::after {
+  top: calc(50% - 3px);
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  background-color: #ff5434;
+}
+.accent .accent-content ul .feature-list-title {
+  color: #ff5434;
+  font-size: 16px;
+}
+.accent .accent-content .btn {
+  position: relative;
+  cursor: pointer;
+  background-color: #731630;
+  color: #fff;
+  -webkit-transition: background-color 400ms ease-out, opacity 400ms ease-out;
+  transition: background-color 400ms ease-out, opacity 400ms ease-out;
+  opacity: 0.5;
+  margin-top: auto;
+}
+.accent .accent-content .btn .btn-border-1::before,
+.accent .accent-content .btn .btn-border-2::before,
+.accent .accent-content .btn .btn-border-1::after,
+.accent .accent-content .btn .btn-border-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #fff;
+}
+.accent .accent-content .btn .btn-border-1::before,
+.accent .accent-content .btn .btn-border-2::before {
+  width: 0;
+  height: 2px;
+  -webkit-transition: width 250ms ease-out;
+  transition: width 250ms ease-out;
+}
+.accent .accent-content .btn .btn-border-1::after,
+.accent .accent-content .btn .btn-border-2::after {
+  width: 2px;
+  height: 0;
+  -webkit-transition: height 250ms ease-out;
+  transition: height 250ms ease-out;
+}
+.accent .accent-content .btn .btn-border-1::before {
+  top: 0;
+  left: 0;
+}
+.accent .accent-content .btn .btn-border-1::after {
+  top: 0;
+  right: 0;
+}
+.accent .accent-content .btn .btn-border-2::before {
+  bottom: 0;
+  right: 0;
+}
+.accent .accent-content .btn .btn-border-2::after {
+  bottom: 0;
+  left: 0;
+}
+.accent .accent-content .btn:hover {
+  background-color: #cc1e2c;
+}

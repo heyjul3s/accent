@@ -1,0 +1,32 @@
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [ratios=1] - The column ratio of the element.
+ * @param {number} [gutter=jeet.gutter] - The gutter for the column.
+ * @returns {list} width gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} result - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value.
+ * @param {list} list - The list of values you want to alter.
+ * @param {number} index - The index of the list item you want to replace.
+ * @param {*} value - The value you want to replace $index with.
+ * @returns {list} result - The list with the value replaced.
+ */
+/**
+ * Reverse a list.
+ * @param {list} list - The list of values you want to reverse.
+ * @returns {list} result - The reversed list.
+ */
+/**
+ * Perform a value into a percentage value.
+ * @param {number} value - The value which should be converted.
+ * @returns {number} value - The percentage.
+ */

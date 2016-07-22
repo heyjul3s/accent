@@ -1,0 +1,180 @@
+@import 'base/all'
+
+.accent-container
+	display flex
+	flex-wrap wrap
+	justify-content space-around
+	position relative
+	width 100%
+	margin 0 auto
+	padding 30px 0
+	text-align center
+	transition opacity 400ms ease-out, transform 400ms ease-out
+	opacity 1
+	transform scale(1)
+
+	+above(tablet-portrait)
+		padding 40px 20px
+
+	+above(tablet-landscape)
+		&:hover
+			> .accent
+				opacity 0.5
+				transform scale(0.95)
+
+			> .accent:hover
+				opacity 1
+				transform scale(1)
+
+				.btn
+					opacity 1
+
+					.btn-border-1,
+					.btn-border-2
+						&::before
+							width 100%
+
+						&::after
+							height 100%
+
+					.btn-border-1
+						&::after
+							transition-delay 250ms
+
+					.btn-border-2
+						&::before
+							transition-delay 500ms
+
+						&::after
+							transition-delay 750ms
+
+
+.accent
+	display flex
+	// flex-direction column
+	position relative
+	width 100%
+	margin 10px
+	padding 40px
+	background-color purple
+	border-top 5px solid mid-purple
+	vertical-align top
+	transition opacity 400ms ease-out, transform 400ms ease-out
+
+	+above(tablet-portrait)
+		padding 40px 60px
+
+	+above(tablet-landscape)
+		width calc(33.33% - 20px)
+		padding 40px 40px 60px
+
+	.accent-content
+		display flex
+		flex 1 1 200px
+		flex-direction column
+		text-align left
+		-webkit-font-smoothing subpixel-antialiased
+		transform translateZ(0)
+
+		.product-title
+			color faded-purple
+			text-transform uppercase
+
+		.product-summary,
+		.suitable-for
+			font-size 14px
+
+		.suitability-title
+			margin-bottom 0
+			color faded-purple
+
+		.suitable-for
+			margin-top 0
+
+		ul
+			padding-bottom 20px
+			padding-left 0
+
+			li
+				display block
+				position relative
+				font-size 14px
+				text-align left
+				padding 5px 0 5px 15px
+
+				&.feature-list-title
+					padding 5px 0
+
+					&::before,
+					&::after
+						display none
+
+				&::before,
+				&::after
+					pseudo()
+					position absolute
+					rounded()
+
+				&::before
+					top calc(50% - 5px)
+					left 0
+					dimensions(10px, 10px)
+					background-color mid-purple
+
+				&::after
+					top calc(50% - 3px)
+					left 2px
+					dimensions(6px, 6px)
+					background-color faded-purple
+
+			.feature-list-title
+				color faded-purple
+				font-size 16px
+
+		.btn
+			position relative
+			cursor pointer
+			background-color mid-purple
+			color white
+			transition background-color 400ms ease-out, opacity 400ms ease-out
+			opacity 0.5
+			margin-top auto
+
+			.btn-border-1,
+			.btn-border-2
+				&::before,
+				&::after
+					pseudo()
+					position absolute
+					background-color white
+
+				&::before
+					width 0
+					height 2px
+					transition width 250ms ease-out
+
+				&::after
+					width 2px
+					height 0
+					transition height 250ms ease-out
+
+			.btn-border-1
+				&::before
+					top 0
+					left 0
+
+				&::after
+					top 0
+					right 0
+
+			.btn-border-2
+				&::before
+					bottom 0
+					right 0
+
+				&::after
+					bottom 0
+					left 0
+
+			&:hover
+				background-color bright-purple
