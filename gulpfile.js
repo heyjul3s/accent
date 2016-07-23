@@ -88,6 +88,6 @@
 
 
     gulp.task('default', [
-        'watch',
+        'watch'
     ]);
 }());

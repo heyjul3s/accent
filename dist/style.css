@@ -3,17 +3,12 @@ body {
   min-height: 100%;
 }
 body {
-  padding-top: 35px;
+  padding: 35px 0;
   overflow-x: hidden;
   overflow-y: scroll;
   font-family: 'Titillium Web', sans-serif;
   background-color: #261822;
   color: #fff;
-}
-@media only screen and (min-width: 768px) {
-  body {
-    padding-top: 90px;
-  }
 }
 * {
   box-sizing: border-box;
@@ -55,9 +50,17 @@ button {
   border: none;
 }
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   max-width: 1200px;
-  min-height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -66,20 +69,45 @@ button {
   display: block;
   position: relative;
 }
-header {
+.site-header {
   padding: 0;
   text-align: center;
   color: #fff;
 }
 @media only screen and (min-width: 768px) {
-  header {
+  .site-header {
     padding: 0;
   }
 }
-header h1 {
+.site-header h1 {
   margin: 0;
   padding: 0;
   text-transform: uppercacse;
+}
+.site-footer {
+  text-align: center;
+}
+.site-footer .slash {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+.site-footer a {
+  position: relative;
+  color: #fff;
+}
+.site-footer a span {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+.site-footer a .icon-arrow-left,
+.site-footer a .icon-arrow-right {
+  font-size: 12px;
+}
+.site-footer a .icon-ju,
+.site-footer a .icon-github-alt {
+  font-size: 22px;
 }
 .accent-container {
   display: -webkit-box;

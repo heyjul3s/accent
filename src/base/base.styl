@@ -4,16 +4,12 @@ body
 
 
 body
-    padding-top 35px
-
+    padding 35px 0
     overflow-x hidden
     overflow-y scroll
     font-family base-font
     background-color body-bg
     color white
-
-    +above(tablet-portrait)
-        padding-top 90px
 
 *
     box-sizing border-box;
@@ -56,9 +52,11 @@ button
 
 
 .container
+    display flex
+    justify-content center
+    align-items center
     position relative
     max-width 1200px
-    min-height 100vh
     padding-left 20px
     padding-right 20px
     margin 0 auto
@@ -67,7 +65,7 @@ button
 	display block
 	position relative
 
-header
+.site-header
 	padding 0
 	text-align center
 	color white
@@ -79,3 +77,24 @@ header
 		margin 0
 		padding 0
 		text-transform uppercacse
+
+.site-footer
+    text-align center
+
+    .slash
+        display inline-block
+        margin 0 10px
+        vertical-align middle
+
+    a
+        position relative
+        color white
+
+        span
+            display inline-block
+            vertical-align middle
+            margin 0 5px
+
+        .icon-arrow-left,
+        .icon-arrow-right
+            font-size 12px

@@ -1,12 +1,12 @@
 {
-  "name": "lorem",
+  "name": "accent",
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Julian Low",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["gulp", "pug", "stylus"],
   "description": "",
   "devDependencies": {
     "gulp": "^3.9.1",
